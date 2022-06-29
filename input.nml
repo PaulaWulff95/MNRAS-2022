@@ -1,0 +1,75 @@
+&grid
+ n_r_max     =217,
+ n_cheb_max  =215,
+ n_phi_tot   =1536,
+ n_r_ic_max  =17,
+n_cheb_ic_max=15,
+ minc        =8,
+/
+&control
+ mode        =1,
+ tag         ="Strat500_ra1e9_ek1e-5_BCal",
+ n_time_steps=700000,
+ courfac     =2.5D0,
+ alffac      =1.0D0,
+ dtmax       =1.0D-6,
+ n_cour_step =1,
+ alpha       =0.6D0,
+ runHours    =71,
+ runMinutes  =50,
+ l_correct_AMe=.true.,
+ l_correct_AMz=.true.,
+ anelastic_flavour ='SINGLEMAT',
+/
+&phys_param
+ ra          =1.0D9,
+ ek          =1.0D-5,
+ pr          =0.5D0,
+ prmag       =0.0D0,
+ DissNb      =1.D0,
+nVarEntropyGrad =6,
+nVarDiff      =5,
+ radratio    =0.7D0,
+ epsS        =1.0D-4,
+ cmbHflux    =1.0D0,
+ GrunNb      =0.5D0,
+ ampStrat    =50.0D1,
+ slopeStrat  =5.0D1,
+ rStrat      =2.67D0,
+ g0          =0.D0,
+ g1          =0.D0,
+ g2          =1.D0,
+ epsc0       =1.0,
+ s_top       =0 0 1.0D0 0.0D0,
+ s_bot       =0 0 0.0D0 0.0D0,
+ ktops       =1,
+ kbots       =2,
+ ktopv       =1,
+ kbotv       =2,
+/
+&start_field
+ l_start_file=.True.,
+ start_file  ="checkpoint_end.Strat500_ra1e9_ek1e-5_BCak",
+/
+&output_control
+ n_log_step  =500,
+ n_graphs    =20,
+ n_specs     =3,
+ n_rsts      =20,
+ n_stores    =3,
+ runid       ="cNF",
+ l_movie     =.FALSE.,
+ n_movie_frames=300,
+ movie(1)    = "VR eq",
+ l_RMS       =.TRUE.,
+ l_2D_RMS    =.TRUE.,
+ l_average   =.TRUE.,
+ l_TO        =.FALSE.,
+/
+&mantle 
+ nRotMa      =0
+/
+&inner_core 
+ sigma_ratio =0.d0,
+ nRotIC      =0,
+/

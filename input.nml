@@ -8,7 +8,7 @@ n_cheb_ic_max=15,
 /
 &control
  mode        =1,
- tag         ="Strat500_ra1e9_ek1e-5_BCal",
+ tag         ="Strat500_Di1b",
  n_time_steps=700000,
  courfac     =2.5D0,
  alffac      =1.0D0,
@@ -49,7 +49,7 @@ nVarDiff      =5,
 /
 &start_field
  l_start_file=.True.,
- start_file  ="checkpoint_end.Strat500_ra1e9_ek1e-5_BCak",
+ start_file  ="checkpoint_end.Strat500_Di1",
 /
 &output_control
  n_log_step  =500,
